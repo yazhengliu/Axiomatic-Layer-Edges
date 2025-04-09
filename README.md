@@ -25,7 +25,13 @@ We apply explanation method to select one edge. If the selected edge disrupts th
 ```bash
 python explain.py
 ```
-
+# Running time
+We plot the running time on **Coauthor-Computer**, **Coauthor-Physics**, and **PubMed** datasets. To obtain the running time:
+```bash
+cd running_time
+python train_GCN.py
+python explain.py
+```
 # Citation
 ```bash
 @article{liu2025axiomatic,
