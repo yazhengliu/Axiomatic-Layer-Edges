@@ -6,7 +6,7 @@ You need to train a model first. To train the model, use th following command, r
 python train.py --data $(dataset)
 ```
 # Provide an explanation
-Once you have a  model, the next step is to provide an explanation. You can find the important input edges or the layer edges as the explanations. Use the following command to obtain the explanation:
+Once you have a  model, the next step is to provide an explanation. You can find the important input edges or the layer edges as the explanations. Use the following command to obtain the explanation and the data in Figure 5:
 ```bash
 python main_explain.py --data $(dataset)
 ```
@@ -21,12 +21,12 @@ We train a GNN model to classify the presence of the motif. To train the GNN mod
 ```bash
 python train_GCN.py
 ```
-We apply explanation method to select one edge. If the selected edge disrupts the motif, the explanation is correct, while if the edge lies outside the motif area, the explanation is wrong. To obtain the explanation on these generated graphs: 
+We apply explanation method to select one edge. If the selected edge disrupts the motif, the explanation is correct, while if the edge lies outside the motif area, the explanation is wrong. Run the following command to obtain the explanation on these generated graphs and the explanation accuracy in Table 8: 
 ```bash
 python explain.py
 ```
 # Running time
-We plot the running time on **Coauthor-Computer**, **Coauthor-Physics**, and **PubMed** datasets. To obtain the running time:
+We test the running time on **Coauthor-Computer**, **Coauthor-Physics**, and **PubMed** datasets. Run the following commands to obtain the running time(the data for Figure 9):
 ```bash
 cd running_time
 python train_GCN.py
